@@ -13,6 +13,7 @@
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 1;
 }
 
 .navbar__s1__title {
@@ -91,10 +92,21 @@
   border-bottom: solid black 1px;
 }
 
+
 .categories p {
   background-color: #a435f0;
   padding: 10px;
   border-radius: 30px;
+  cursor: pointer;
+  border: solid #a435f0;
+}
+
+.categories p:hover {
+  background-color: white;
+  color: black;
+  border: solid #a435f0;
+
+  transition: 1s;
 }
 
 .sale-img {
@@ -117,8 +129,25 @@
   bottom: 10px;
   padding: 10px;
   position: absolute;
-  top: 50px;
-  left: 80px;
+  top: 100px;
+  left: 250px;
+  animation: flash;
+  animation-duration: 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  /* Makes the result of animation stay */
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .recommended {
