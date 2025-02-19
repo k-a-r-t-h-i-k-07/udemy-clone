@@ -10,6 +10,9 @@
   border-bottom: solid black 1px;
   gap: 10px;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .navbar__s1__title {
@@ -43,6 +46,42 @@
   align-items: center;
 }
 
+.navbar__s3__header {
+  position: relative;
+  text-align: center;
+}
+
+.navbar__s3__desc {
+  position: absolute;
+  border: solid black 1px;
+  width: 200px;
+  padding: 5px;
+  background-color: bisque;
+  color: black;
+  right: 0;
+  display: none;
+}
+
+.navbar__s3__desc__arrow {
+  position: absolute;
+  bottom: 100%;
+  left: 90%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+
+  /* Inverted the arrow */
+}
+
+.navbar__s3__header:hover .navbar__s3__desc {
+  display: block;
+}
+
+.navbar__s3__desc a {
+  text-decoration: none;
+}
+
 .categories {
   font-family: "Gabarito", serif;
   display: flex;
@@ -58,8 +97,28 @@
   border-radius: 30px;
 }
 
+.sale-img {
+  position: relative;
+  font-family: "Gabarito", serif;
+
+}
+
 .sale-img img {
   width: 100%;
+}
+
+.sale-img__offer {
+  position: absolute;
+  background-color: wheat;
+  color: black;
+  border: solid black 1px;
+  height: 100px;
+  width: fit-content;
+  bottom: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  left: 80px;
 }
 
 .recommended {
@@ -72,6 +131,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .course-card {
   width: 250px;
   font-family: "Gabarito", serif;
