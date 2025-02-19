@@ -83,6 +83,13 @@
   text-decoration: none;
 }
 
+.navbar__s4 {
+  display: none;
+  padding: 10px;
+  position: relative;
+}
+
+
 .categories {
   font-family: "Gabarito", serif;
   display: flex;
@@ -117,6 +124,7 @@
 
 .sale-img img {
   width: 100%;
+
 }
 
 .sale-img__offer {
@@ -137,6 +145,8 @@
   animation-fill-mode: forwards;
   /* Makes the result of animation stay */
 }
+
+
 
 @keyframes flash {
   0% {
@@ -219,4 +229,63 @@
   display: flex;
   justify-content: space-between;
   margin: 20px;
+}
+
+@media screen and (max-width:600px) {
+
+  .sale-img__offer {
+    font-size: 10px;
+    position: absolute;
+    background-color: wheat;
+    color: black;
+    border: solid black 1px;
+    height: 45%;
+    width: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: flash;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    /* Makes the result of animation stay */
+  }
+
+  .categories,
+  .navbar__s2,
+  .navbar__s3 {
+    display: none;
+  }
+
+  .navbar__s4 {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width:601px) {
+
+  .sale-img__offer {
+
+    position: absolute;
+    background-color: wheat;
+    color: black;
+    border: solid black 1px;
+    height: 20%;
+    width: fit-content;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation: flash;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    /* Makes the result of animation stay */
+  }
+
+
+
+
 }
