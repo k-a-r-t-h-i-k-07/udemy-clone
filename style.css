@@ -1,10 +1,12 @@
-.body {
-  padding: 0;
-  margin: 0;
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Gabarito", serif;
 }
 
 .navbar {
-  font-family: "Gabarito", serif;
+  padding: 10px;
+  /* font-family: "Gabarito", serif; */
   display: flex;
   justify-content: space-between;
   border-bottom: solid black 1px;
@@ -132,11 +134,9 @@
   background-color: wheat;
   color: black;
   border: solid black 1px;
-  height: 100px;
   width: fit-content;
-  bottom: 10px;
+  height: 100px;
   padding: 10px;
-  position: absolute;
   top: 100px;
   left: 250px;
   animation: flash;
@@ -180,7 +180,7 @@
 
 .course-card img {
   width: 100%;
-  height: 250px;
+  height: 150px;
 }
 
 .topics {
@@ -234,29 +234,20 @@
 }
 
 
-@media screen and (max-width:1000px) {
 
-  .sale-img__offer {
-    font-size: 8px;
-    position: absolute;
-    background-color: wheat;
-    color: black;
-    border: solid black 1px;
-    height: 50px;
-    width: 200px;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    left: 40px;
-    animation: flash;
-    animation-duration: 2s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    /* Makes the result of animation stay */
+@media screen and (max-width:500px) {
+  body {
+    font-size: 12px;
   }
 
-  .categories,
-  .navbar__s2,
+  .course-card {
+    flex-basis: 40%;
+  }
+
+  .categories {
+    display: none;
+  }
+
   .navbar__s3 {
     display: none;
   }
@@ -265,41 +256,36 @@
     display: block;
   }
 
-  .course-card {
-    font-size: 10px;
+  .sale-img__offer {
+    height: 60px;
+    width: 150px;
+    font-size: 8px;
+    padding-top: 1px;
+    left: 60px;
+    top: 25px;
+  }
+
+  .navbar__s2 input {
+    font-size: 9px;
   }
 
 }
 
-@media screen and (max-width:300px) {
+@media screen and (min-width:500px) and (max-width:1000px) {
+
+
+  .course-card {
+    flex-basis: 20%;
+  }
 
   .sale-img__offer {
-    font-size: 5px;
-    position: absolute;
-    background-color: wheat;
-    color: black;
-    border: solid black 1px;
-    height: 200px;
-    width: fit-content;
-    padding: 10px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    animation: flash;
-    animation-duration: 2s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    /* Makes the result of animation stay */
-  }
 
-  .categories,
-  .navbar__s2,
-  .navbar__s3 {
-    display: none;
-  }
-
-  .navbar__s4 {
-    display: block;
+    padding-top: 1px;
+    font-size: 10px;
+    width: 40%;
+    height: 80px;
+    left: 80px;
+    top: 50px;
   }
 
 }
